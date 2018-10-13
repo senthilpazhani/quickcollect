@@ -1,0 +1,5 @@
+# Canonical https/www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.quickcollect.in%{REQUEST_URI} [R=301,L,NE]
+
